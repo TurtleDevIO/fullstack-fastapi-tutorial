@@ -1,0 +1,22 @@
+[project]
+name = "backend"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "fastapi[standard]>=0.135.2",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.15.8",
+]
+
+[tool.ruff]
+line-length = 100
+extend-select = ["I"] # Organize imports with Ruff's "I" rules.
+
+[tool.ruff.format]
+# Like Black, use double quotes for strings.
+quote-style = "double"
