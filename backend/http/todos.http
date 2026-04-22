@@ -1,0 +1,35 @@
+### Create a todo
+POST http://localhost:8000/todos
+Content-Type: application/json
+
+{"title": "Buy groceries"}
+
+### Create another todo
+POST http://localhost:8000/todos
+Content-Type: application/json
+
+{"title": "Write blog post"}
+
+### Get all todos
+GET http://localhost:8000/todos
+
+### Get a single todo
+GET http://localhost:8000/todos/1
+
+### Update a todo (PUT - replaces the entire resource)
+PUT http://localhost:8000/todos/1
+Content-Type: application/json
+
+{"title": "Buy groceries and cook dinner", "completed": false}
+
+### Toggle completed (PATCH - partial update)
+PATCH http://localhost:8000/todos/1
+Content-Type: application/json
+
+{"completed": true}
+
+### Delete a todo
+DELETE http://localhost:8000/todos/1
+
+### Get a todo that doesn't exist (404)
+GET http://localhost:8000/todos/999
